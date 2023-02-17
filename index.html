@@ -13,6 +13,11 @@
     <title>TODOs List</title>
 
     <style>
+
+
+
+
+
         .navbar-brand {
             background-color: rgb(18, 19, 19);
 
@@ -21,6 +26,56 @@
             border-radius: 50px;
             border-color: green;
         }
+
+#mycss{
+display: flex;
+justify-content: centre;
+align-items: center;
+min-height: 20vh;
+background: #111;
+text-align: center;
+
+}
+
+#myh2{
+position: relative;
+font-size: 6em;
+color: #222;
+width: 100%;
+
+}
+
+#myh2::before{
+content: attr(data-text);
+position: absolute;
+color: #fff;
+
+overflow: hidden;
+white-space: nowrap;
+border-right: 4px solid #fff;
+
+animation :animate 8s   linear infinite;
+filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0  50px #fff);
+
+}
+
+@keyframes animate 
+{
+    
+    0%,10%,100%{
+
+width: 0;;
+
+}
+
+70%, 90%{
+
+    width: 100%;
+}
+
+}
+
+
     </style>
 
 
@@ -29,9 +84,15 @@
 
 <body>
 
+
+<div  id="mycss"  >
+<h3   id="myh2" style="text-align: center;" data-text="&nbsp;ToDosList&nbsp">&nbsp;ToDosList&nbsp;</h3>
+
+</div>
+
     <h1 style="background-color: rgb(88, 144, 196); margin: 0px;">
 
-        <marquee direction="right"><img src="" alt=""> ToDoList</marquee>
+        <marquee direction="right"  style="color: rgb(244, 239, 239);"><img src="" alt=""> ToDosList</marquee>
     </h1>
 
 
@@ -83,16 +144,16 @@
     </nav>
 
     <div class="container my-4">
-        <h2 class="text-center"  style="background-color: #7fc4ff;  border-radius: 3px;  padding: 1px;   "  >TODOs List</h2>
+        <h2 class="text-center  text-wrap  "  style="background-color: #7fc4ff;   border-radius: 3px;">TODOs List</h2>
 
         <div class="form-group">
-            <label for="title" style="background-color: #7fc4ff;  border-radius: 3px;  padding: 1px;   " >Title</label>
+            <label for="title"   style="background-color: #7fc4ff;  border-radius: 3px;  padding: 1px;   ">Title</label>
             <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-muted">Add an item to the list</small>
         </div>
 
         <div class="form-group">
-            <label for="description"  style="background-color: #7fc4ff;  border-radius: 3px;  padding: 1px;   " >Description</label>
+            <label for="description"   style="background-color: #7fc4ff; border-radius: 3px;  padding: 1px; ">Description</label>
             <textarea class="form-control" id="description" rows="3"></textarea>
         </div>
 
@@ -102,7 +163,7 @@
 
 
         <div id="items" class="my-4">
-            <h2>Your Items</h2>
+            <h2  >  Your Items</h2>
             <table border="5px" class="table">
                 <thead>
                     <tr>
